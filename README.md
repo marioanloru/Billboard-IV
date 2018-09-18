@@ -35,18 +35,18 @@ Para más detalles, consulte el archivo [COPYING](COPYING)
 
 Las herramientas utilizadas para el desarrollo de este proyecto, así como los motivos por los cuales se han seleccionado:
 
-- ###### NodeJS
+- ### NodeJS
 
   - Uso de javascript tanto en cliente como en servidor
   - Asíncrono (basado en eventos)
 
-- ###### Redis
+- ### Redis
 
   - Base de datos en memoria
   - NoSQL
   - Gestión de paquetes con NPM (retroalimentación alta por parte de la comunidad)
 
-- ###### Amazonaws o Microsoft Azure
+- ### Amazonaws o Microsoft Azure
 
   - [TO DO]
 
