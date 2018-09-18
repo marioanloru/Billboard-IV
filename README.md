@@ -2,9 +2,7 @@
 
 Copyright (C) 2018-2019 Mario Antonio López Ruiz
 
-```
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)]
-```
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) 
 
 ## 1 - Descripción
 
@@ -29,7 +27,7 @@ This program is free software: you can redistribute it and/or modify
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ```
 
-Para más detalles, consulte el archivo [COPYING](COPYING)
+Para más detalles, consulte el archivo [LICENSE](https://github.com/marioanloru/Billboard-IV/blob/master/LICENSE)
 
 ## 3 - Servicios y herramientas
 
