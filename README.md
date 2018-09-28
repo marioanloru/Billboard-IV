@@ -8,7 +8,7 @@ Copyright (C) 2018-2019 Mario Antonio López Ruiz
 
 Proyecto desarrollado en la asignatura "Infraestructura Virtual" de la ETS de Ingenierías Informática y de Telecomunicación en el grado de Ingeniería Informática. Consiste en la obtención de información de la cartelera cinematográfica bajo determinadas condiciones (tiempo, situación geográfica...), así como poder consultar opiniones del público sobre las diferentes películas.
 
-Constará de dos microservicios relacionados con carteleras cinematográficas. 
+Constará de dos microservicios relacionados con carteleras cinematográficas, siendo prioritario el primerio ante el segundo:
 
 - Obtener información de la cartelera bajo determinadas condiciones
 - Obtener opioniones de usuarios sobre ciertas películas de la cartelera
