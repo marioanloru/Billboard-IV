@@ -1,0 +1,28 @@
+{
+  "name": "billboard-iv",
+  "version": "1.0.0",
+  "description": "Proyecto destinado a la asignatura Infraestructura Virtual",
+  "main": "./src/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "mocha": "^5.2.0",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/marioanloru/Billboard-IV.git"
+  },
+  "author": "Mario Antonio López Ruiz",
+  "license": "SEE LICENSE IN ./LICENSE",
+  "bugs": {
+    "url": "https://github.com/marioanloru/Billboard-IV/issues"
+  },
+  "homepage": "https://github.com/marioanloru/Billboard-IV#readme"
+}

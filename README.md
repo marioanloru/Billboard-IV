@@ -8,6 +8,11 @@ Copyright (C) 2018-2019 Mario Antonio López Ruiz
 
 Proyecto desarrollado en la asignatura "Infraestructura Virtual" de la ETS de Ingenierías Informática y de Telecomunicación en el grado de Ingeniería Informática. Consiste en la obtención de información de la cartelera cinematográfica bajo determinadas condiciones (tiempo, situación geográfica...), así como poder consultar opiniones del público sobre las diferentes películas.
 
+Constará de dos microservicios relacionados con carteleras cinematográficas. 
+
+- Obtener información de la cartelera bajo determinadas condiciones
+- Obtener opioniones de usuarios sobre ciertas películas de la cartelera
+
 ## 2 - Licencia: GNU GPL v3
 
 Este proyecto es software libre, puede ser redistribuido libremente bajo ciertas condiciones.
@@ -37,16 +42,30 @@ Las herramientas utilizadas para el desarrollo de este proyecto, así como los m
 
   - Uso de javascript tanto en cliente como en servidor
   - Asíncrono (basado en eventos)
+  - Gestión de paquetes con NPM (retroalimentación alta por parte de la comunidad)
 
 - ### Redis
 
   - Base de datos en memoria
   - NoSQL
-  - Gestión de paquetes con NPM (retroalimentación alta por parte de la comunidad)
 
-- ### Amazonaws o Microsoft Azure
+- ### Amazonaws
 
-  - [TO DO]
+  - Servicios en la nube
+
+- ### Docker
+
+  - Gran adopción en el ámbito empresarial
+  - Ventajas frente a máquinas virtuales
+  - Despliegue ágil, automatizado y seguro
+  - Portabilidad
+  - Automatización de tests
+
+- ### Mocha
+
+  - Posibilidad de generar test síncronos o asíncronos
+  - Sencillez
+  - Utilidades para la ejecución y reporte de los tests
 
 ## 4 - Autores
 
