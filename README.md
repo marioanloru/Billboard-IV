@@ -51,7 +51,7 @@ Las herramientas utilizadas para el desarrollo de este proyecto, así como los m
 
 - ### Amazonaws
 
-  - Servicios en la nube
+  - Servicios en la nube.
 
 - ### Docker
 
