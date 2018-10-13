@@ -88,9 +88,7 @@ Para ejecutar los tests creados con *Assert* y obtener informes de los resultado
 
 ###### Gestor de versión y bibliotecas
 
-Para la automatización y replicabilidad del entorno voy a utilizar *nvm*, para reflejar localmente los entornos que se usan en producción y facilitar las mismas condiciones que encontraremos más adelante en un PaaS. 
-
-Nvm es el acrónimo de *"Node Version Manager"*
+Para la automatización y replicabilidad del entorno voy a utilizar *n*, para reflejar localmente los entornos que se usan en producción y facilitar las mismas condiciones que encontraremos más adelante en un PaaS. 
 
 ###### Herramienta de constucción
 
