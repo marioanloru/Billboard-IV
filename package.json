@@ -2,7 +2,7 @@
   "name": "billboard-iv",
   "version": "1.0.0",
   "description": "Proyecto destinado a la asignatura Infraestructura Virtual",
-  "main": "./src/index.js",
+  "main": "./app/app.js",
   "directories": {
     "test": "tests"
   },
@@ -13,7 +13,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "mocha"
+    "test": "mocha ./tests/test.js"
   },
   "repository": {
     "type": "git",
