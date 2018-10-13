@@ -44,14 +44,21 @@ Las herramientas utilizadas para el desarrollo de este proyecto, así como los m
   - Asíncrono (basado en eventos)
   - Gestión de paquetes con NPM (retroalimentación alta por parte de la comunidad)
 
+- ### Express
+
+  - Framework web para Node
+  - Minimalista y flexible
+
+- #### AngularJS
+
+  - Framework para frontend
+  - Utilizado para crear y mantener aplicaciones web de una sola página
+  - Modelo Vista Controlador (MVC), haciendo que desarrollo y pruebas sean más fáciles
+
 - ### Redis
 
   - Base de datos en memoria
   - NoSQL
-
-- ### Amazonaws
-
-  - Servicios en la nube.
 
 - ### Docker
 
@@ -67,6 +74,32 @@ Las herramientas utilizadas para el desarrollo de este proyecto, así como los m
   - Sencillez
   - Utilidades para la ejecución y reporte de los tests
 
-## 4 - Autores
+
+
+## 4 - Desarrollo basado en pruebas
+
+###### Creación de Tests
+
+Para la creación de test se va a utilizar *Assert*, librería que forma parte de la estándar de JS. Mediante esta librería crearé los tests en Javascript
+
+###### Marco de ejecución de los tests
+
+Para ejecutar los tests creados con *Assert* y obtener informes de los resultados voy a utilizar *Mocha*, framework de pruebas de JavaScript ejecutado en Node.js. Permite crear tanto tests síncronos como asíncronos de forma muy sencilla, así como utilidades para ejecución y reporte de los tests.
+
+###### Gestor de versión y bibliotecas
+
+Para la automatización y replicabilidad del entorno voy a utilizar *nvm*, para reflejar localmente los entornos que se usan en producción y facilitar las mismas condiciones que encontraremos más adelante en un PaaS. 
+
+Nvm es el acrónimo de *"Node Version Manager"*
+
+###### Herramienta de constucción
+
+Como herramienta de construcción se va a utilizar *Grunt*, una herramienta de "compilación" para automatizar procesos
+
+###### Integración continua
+
+Se utilizará Travis (travis-ci), dada la facilidad para sincronizar y configurar la cuenta con GitHub. Soporta múltiples lenguajes, entre ellos NodeJS. Permite ejecutar los tests de forma inmediata, al añadir funcionalidades a la clase que se está testeando
+
+## 5 - Autores
 
 Para más detalles sobre los autores, consulte el archivo [AUTHORS](https://github.com/marioanloru/Billboard-IV/blob/master/AUTHORS.md)
