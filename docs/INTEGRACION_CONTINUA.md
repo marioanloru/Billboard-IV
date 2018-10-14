@@ -18,7 +18,7 @@ Para ejecutar los test podemos ejecutar `npm test`, un alias que ejecutará moch
 
 Para la automatización y replicabilidad del entorno voy a utilizar *n*vm, para reflejar localmente los entornos que se usan en producción y facilitar las mismas condiciones que encontraremos más adelante en un PaaS. 
 
-### Herramienta de constucción
+### Herramienta de construcción
 
 Como herramienta de construcción se va a utilizar *Grunt*, una herramienta de "compilación" para automatizar procesos. 
 
