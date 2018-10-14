@@ -11,7 +11,25 @@ Proyecto desarrollado en la asignatura "Infraestructura Virtual" de la ETS de In
 Constará de dos microservicios relacionados con carteleras cinematográficas, siendo prioritario el primerio ante el segundo:
 
 - Obtener información de la cartelera bajo determinadas condiciones
-- Obtener opioniones de usuarios sobre ciertas películas de la cartelera
+- Obtener opiniones de usuarios sobre ciertas películas de la cartelera
+
+Para probar el proyecto, una vez descargado, basta con ejecutar:
+
+`grunt install`
+
+Instalará las dependencias necesarias para el proyecto
+
+`grunt server`
+
+Activará en el puerto 8333 el proyecto. Si accedemos a localhost:8333/pelicula obtendremos información sobre las películas actualmente procesadas.
+
+Para más información puede consultar la documentación de [intregación continua](https://github.com/marioanloru/Billboard-IV/tree/master/docs/INTEGRACION_CONTINUA.md)
+
+Para obtener la documentación de todos los ficheros:
+
+`grunt documentation`
+
+Se generarará la documentación en la carpeta `/docs` en formato html
 
 ## 2 - Licencia: GNU GPL v3
 
@@ -75,29 +93,6 @@ Las herramientas utilizadas para el desarrollo de este proyecto, así como los m
   - Utilidades para la ejecución y reporte de los tests
 
 
-
-## 4 - Desarrollo basado en pruebas
-
-###### Creación de Tests
-
-Para la creación de test se va a utilizar *Assert*, librería que forma parte de la estándar de JS. Mediante esta librería crearé los tests en Javascript
-
-###### Marco de ejecución de los tests
-
-Para ejecutar los tests creados con *Assert* y obtener informes de los resultados voy a utilizar *Mocha*, framework de pruebas de JavaScript ejecutado en Node.js. Permite crear tanto tests síncronos como asíncronos de forma muy sencilla, así como utilidades para ejecución y reporte de los tests.
-
-###### Gestor de versión y bibliotecas
-
-Para la automatización y replicabilidad del entorno voy a utilizar *n*, para reflejar localmente los entornos que se usan en producción y facilitar las mismas condiciones que encontraremos más adelante en un PaaS. 
-
-###### Herramienta de constucción
-
-Como herramienta de construcción se va a utilizar *Grunt*, una herramienta de "compilación" para automatizar procesos
-
-###### Integración continua
-
-Se utilizará Travis (travis-ci), dada la facilidad para sincronizar y configurar la cuenta con GitHub. Soporta múltiples lenguajes, entre ellos NodeJS. Permite ejecutar los tests de forma inmediata, al añadir funcionalidades a la clase que se está testeando
-
-## 5 - Autores
+## 4 - Autores
 
 Para más detalles sobre los autores, consulte el archivo [AUTHORS](https://github.com/marioanloru/Billboard-IV/blob/master/AUTHORS.md)
