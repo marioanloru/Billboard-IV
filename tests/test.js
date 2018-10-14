@@ -1,5 +1,5 @@
-const assert = require('assert');
-const Film = require('../src/Film.js');
+var assert = require('assert');
+var Film = require('../src/Film.js');
 
 describe('Film', () => {
   //  Checks for a right load of the library
@@ -10,7 +10,7 @@ describe('Film', () => {
   });
   describe('Creation', () => {
     it('Film should be created correctly', () => {
-      let new_film = new Film('Pocahontas', '23/06/1995');
+      var new_film = new Film('Pocahontas', '23/06/1995');
       assert.equal(new_film.to_string(), 'Pocahontas - 23/06/1995');
     });
   });
