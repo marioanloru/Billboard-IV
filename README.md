@@ -67,7 +67,7 @@ Las herramientas utilizadas para el desarrollo de este proyecto, así como los m
   - Framework web para Node
   - Minimalista y flexible
 
-- #### AngularJS
+- ### AngularJS
 
   - Framework para frontend
   - Utilizado para crear y mantener aplicaciones web de una sola página
@@ -91,6 +91,12 @@ Las herramientas utilizadas para el desarrollo de este proyecto, así como los m
   - Posibilidad de generar test síncronos o asíncronos
   - Sencillez
   - Utilidades para la ejecución y reporte de los tests
+  
+- ### Grunt
+  - Automatización de procesos (validación de sintaxis, minificación, compilación...)
+- ### Travis
+  - Sincronización con Github
+  - Ejecución de tests de forma inmediata al añadir funcionalidades
 
 
 ## 4 - Autores
