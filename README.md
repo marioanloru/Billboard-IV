@@ -101,4 +101,4 @@ Las herramientas utilizadas para el desarrollo de este proyecto, así como los m
 
 ## 4 - Autores
 
-Para más detalles sobre los autores, consulte el archivo [AUTHORS](https://github.com/marioanloru/Billboard-IV/blob/master/AUTHORS.md)
+Para más detalles sobre los autor(es), consulte el archivo [AUTHORS](https://github.com/marioanloru/Billboard-IV/blob/master/AUTHORS.md)
