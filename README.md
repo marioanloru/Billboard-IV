@@ -23,7 +23,7 @@ Instalará las dependencias necesarias para el proyecto
 
 Activará en el puerto 8333 el proyecto. Si accedemos a localhost:8333/pelicula obtendremos información sobre las películas actualmente procesadas.
 
-Para más información puede consultar la documentación de [intregación continua](https://github.com/marioanloru/Billboard-IV/tree/master/docs/INTEGRACION_CONTINUA.md)
+Para más información puede consultar la documentación de [integración continua](https://github.com/marioanloru/Billboard-IV/tree/master/docs/INTEGRACION_CONTINUA.md)
 
 Para obtener la documentación de todos los ficheros:
 
