@@ -20,7 +20,8 @@
     "grunt-shell": "^2.1.0"
   },
   "scripts": {
-    "test": "mocha ./tests/test.js"
+    "test": "mocha ./tests/test.js",
+    "start": "node ./src/app.js"
   },
   "repository": {
     "type": "git",
