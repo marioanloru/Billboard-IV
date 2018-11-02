@@ -1,5 +1,16 @@
 var assert = require('assert');
 var Film = require('../src/Film.js');
+var request = require('supertest');
+app = require('../src/app.js');
+
+describe('PUT film', () => {
+  it('should create', (done) => {
+    request(app)
+      .put('/pelicula/Avatar/18/12/2009')
+      .expect('Content-Type', /json/)
+      .expect(200, done)
+  })
+});
 
 describe('Film', () => {
   //  Checks for a right load of the library
@@ -10,8 +21,8 @@ describe('Film', () => {
   });
   describe('Creation', () => {
     it('Film should be created correctly', () => {
-      var new_film = new Film('Pocahontas', '23/06/1995');
-      assert.equal(new_film.to_string(), 'Pocahontas - 23/06/1995');
+      var new_film = new Film('Pocahontas', '23-06-1995');
+      assert.equal(new_film.to_string(), 'Pocahontas - 23-06-1995');
     });
   });
 });
