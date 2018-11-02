@@ -1,11 +1,11 @@
 var assert = require('assert');
 var Film = require('../src/Film.js');
-var request = require('supertest');
-app = require('../src/app.js');
+var app = require('../src/app.js');
+var supertest = require('supertest');
 
 describe('PUT film', () => {
   it('should create', (done) => {
-    request(app)
+    supertest(app)
       .put('/pelicula/Avatar/18/12/2009')
       .expect('Content-Type', /json/)
       .expect(200, done)

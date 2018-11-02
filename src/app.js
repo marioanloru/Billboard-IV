@@ -24,9 +24,5 @@ app.put('/pelicula/:titulo/:dia/:mes/:anyo', (req, res) => {
     res.send(nueva_pelicula);
 });
 
-//  Server listening on the specified port
-app.listen(8333, () => {
-    console.log('Listening on port 8333')
-});
-
 module.exports = app;
+

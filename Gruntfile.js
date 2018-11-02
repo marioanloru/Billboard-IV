@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     },
     shell: {
       connect: {
-        command: 'node src/app.js'
+        command: 'node src/index.js'
       },
       install: {
         command: 'npm install .'
