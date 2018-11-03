@@ -27,7 +27,10 @@ module.exports = class Film {
 
     //  Transformas actual Film with its attributes to a string
     to_string() {
-        return this._title + ' - ' + this._date;
+        var year = this._date.getUTCFullYear();
+        var month = this._date.getUTCMonth();
+        var day = this._date.getUTCDate() + 1;
+        return this._title + ' - ' + year + '/' + month + '/' + day;
     }
 
     //  Shows the title of the film
