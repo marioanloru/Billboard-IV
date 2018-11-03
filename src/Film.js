@@ -29,7 +29,7 @@ module.exports = class Film {
     to_string() {
         var year = this._date.getUTCFullYear();
         var month = this._date.getUTCMonth();
-        var day = this._date.getUTCDate() + 1;
+        var day = this._date.getUTCDate();
         return this._title + ' - ' + year + '/' + month + '/' + day;
     }
 
