@@ -31,6 +31,8 @@ Para obtener la documentación de todos los ficheros:
 
 Se generarará la documentación en la carpeta `/docs` en formato html
 
+
+
 ## 2 - Licencia: GNU GPL v3
 
 Este proyecto es software libre, puede ser redistribuido libremente bajo ciertas condiciones.
@@ -102,8 +104,30 @@ Las herramientas utilizadas para el desarrollo de este proyecto, así como los m
 
 Tras comparar y probar diferentes opciones PaaS (Openshift, Azure, AWS) he decidido utilizar para este proyecto Heroku, ya que ofrece un servicio "fremium", siendo la parte gratuita bastante extensa. Además posee una herramienta en estado "beta" para integración con Github, y también permite la integración continua con Travis.
 
-Puede consultar con detalle la configuración para el despliegue en Hekoru en [DESPLIGUE](https://github.com/marioanloru/Billboard-IV/blob/master/docs/INTEDESPLIEGUE.md)
+Puede consultar con detalle la configuración para el despliegue en Hekoru en [DESPLIEGUE](https://github.com/marioanloru/Billboard-IV/blob/master/docs/DESPLIEGUE.md)
 
-## 5 - Autores
+## 5 - API
+Tanto si la aplicación se está desplegando en local como si se utiliza el despliegue en Heroku, aquí se exponen las funcionalidades en base a las rutas disponibles:
+
+### Comprobar estado de la app
+Para comprobar el estado de la aplicación, petición GET a la ruta:: `/`
+
+### Obtener una película aleatoria
+Petición GET a la ruta: `/pelicula`
+
+### Obtener una película por título
+Petición GET a la ruta: `/pelicula/<titulo>` siendo `<titulo>` el título de la película a consultar
+
+### Obtener una película por fecha
+Petición GET a la ruta: `/pelicula/<año>/<mes>/<dia>` sustituyendo los parametros entre `<>` por la el valor de la variable que indica su nombre
+
+### Insertar una película nueva
+Petición PUT a la ruta: `/pelicula/<titulo>/<anyo>/<mes>/<dia>` sustituyendo los parametros entre `<>` por la el valor de la variable que indica su nombre.
+Un ejemplo con cURL: `curl -X PUT http://localhost:8333/pelicula/rutia/2/5/1996`
+
+### Eliminar una película por título
+[TO DO]Este apartado tendrá mas sentido cuando se añada persistencia mediante bases de datos
+Peticion DELETE a la ruta: `/pelicula/<titulo>` siendo `<titulo>` el nombre de la película a eliminar
+## 6 - Autores
 
 Para más detalles sobre los autor(es), consulte el archivo [AUTHORS](https://github.com/marioanloru/Billboard-IV/blob/master/AUTHORS.md)
