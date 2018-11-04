@@ -104,6 +104,7 @@ Las herramientas utilizadas para el desarrollo de este proyecto, así como los m
 
 Tras comparar y probar diferentes opciones PaaS (Openshift, Azure, AWS) he decidido utilizar para este proyecto Heroku, ya que ofrece un servicio "fremium", siendo la parte gratuita bastante extensa. Además posee una herramienta en estado "beta" para integración con Github, y también permite la integración continua con Travis.
 
+Para comprobar el despliegue en Heroku funcionando: [DESPLIEGUE](https://billboard-iv.herokuapp.com/)
 Puede consultar con detalle la configuración para el despliegue en Hekoru en [DESPLIEGUE](https://github.com/marioanloru/Billboard-IV/blob/master/docs/DESPLIEGUE.md)
 
 ## 5 - API
