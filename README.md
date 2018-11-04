@@ -2,7 +2,7 @@
 
 Copyright (C) 2018-2019 Mario Antonio López Ruiz
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Build Status](https://travis-ci.org/marioanloru/Billboard-IV.svg?branch=master)](https://travis-ci.org/marioanloru/Billboard-IV)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Build Status](https://travis-ci.org/marioanloru/Billboard-IV.svg?branch=master)[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://billboard-iv.herokuapp.com/)](https://travis-ci.org/marioanloru/Billboard-IV)
 
 ## 1 - Descripción
 
@@ -98,7 +98,12 @@ Las herramientas utilizadas para el desarrollo de este proyecto, así como los m
   - Sincronización con Github
   - Ejecución de tests de forma inmediata al añadir funcionalidades
 
+## 4 - Despliegue en PaaS
 
-## 4 - Autores
+Tras comparar y probar diferentes opciones PaaS (Openshift, Azure, AWS) he decidido utilizar para este proyecto Heroku, ya que ofrece un servicio "fremium", siendo la parte gratuita bastante extensa. Además posee una herramienta en estado "beta" para integración con Github, y también permite la integración continua con Travis.
+
+Puede consultar con detalle la configuración para el despliegue en Hekoru en [DESPLIGUE](https://github.com/marioanloru/Billboard-IV/blob/master/docs/INTEDESPLIEGUE.md)
+
+## 5 - Autores
 
 Para más detalles sobre los autor(es), consulte el archivo [AUTHORS](https://github.com/marioanloru/Billboard-IV/blob/master/AUTHORS.md)
