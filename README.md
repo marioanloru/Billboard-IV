@@ -146,3 +146,4 @@ Contenedor: https://docker-billboard-iv.herokuapp.com/
 ## 7 - Autores
 
 Para más detalles sobre los autor(es), consulte el archivo [AUTHORS](https://github.com/marioanloru/Billboard-IV/blob/master/AUTHORS.md)
+
