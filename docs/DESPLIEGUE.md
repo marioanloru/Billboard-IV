@@ -22,4 +22,38 @@ Si se quiere hacer `push`directamente al repositorio de Heroku:
 
 ` git push heroku master`
 
-El fichero `Procfile` contiene la configuración que se utilizará para realizar el despliegue en Heroku una vez se suban los cambios, si se quiere modificar la app habrá que modificar este fichero, o si se quiere aplicar alguna herramienta nueva para realizar el `build`
+Para comprobar que efectivamente se despliega en heroku directamente cuando pusheamos a Github, primero comprobamos que la configuración sea correcta:
+
+![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/heroku-git.png)
+
+Y ahora hacemos la prueba, vamos a realizar algún cambio, hacemos push a el repositorio de Github, se debería esperar a que pasen los test de integración continua y después desplegarse en Heroku, en ese orden:
+
+Hacemos push al repositorio en github:
+
+![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/heroku-git1.png)
+
+Comprobamos que se estén pasando los test de integración continua:
+
+![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/heroku-git2.png)
+
+Esperamos a que se pasen los test:
+
+![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/heroku-git3.png)
+
+Vamos a heroku y comprobamos que tras pasar los test, se ha desplegado la aplicación:
+
+![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/heroku-git4.png)
+
+Desde el log de github, podemos observar que el despliegue ha sido correcto
+
+![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/heroku-gitf.png)
+
+#### Fichero `Procfile`
+
+Heroku posee distintos tipos de ejecución y nosotros podemos definir como queremos que nuestra aplicación se ejecute. Para configurar que tipo de ejecución se quiere utilizar en Heroku se define a través del fichero `Procfile`
+
+El contenido del fichero `Procfile` es:
+
+ `web: <comando>`
+
+Web es el tipo de proceso que se está definiendo, y el comando que viene después es la orden que se va a ejecutar. ¿Por qué web? Porque la aplicación que estamos desarrollando es un microservicio web al que se quiere acceder por el usuario a través del navegador o por peticiones mediante http-
