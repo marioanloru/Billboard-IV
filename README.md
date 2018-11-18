@@ -131,6 +131,10 @@ Un ejemplo con cURL: `curl -X PUT http://localhost:8333/pelicula/rutia/2/5/1996`
 Peticion DELETE a la ruta: `/pelicula/<titulo>` siendo `<titulo>` el nombre de la película a eliminar
 ## 6 - Virtualización mediante contenedores
 
+Para acceder a la aplicación desplegada mediante docker: 
+
+Contenedor: https://docker-billboard-iv.herokuapp.com/
+
 Para realizar el aislamiento de la aplicación en un entorno virtualizado (usando contenedores) se usa [Docker](https://www.docker.com/). Docker es una herramienta de gestión de contenedores que además de permitir instalarlos permite trabajar con conjuntos de contenedores y exportarlos de forma que se pueda desplegar en diferentes servicios en la nube.
 
 Para leer la documentación detallada de cómo se ha realizado, consulte el archivo [VIRTUALIZATION](https://github.com/marioanloru/Billboard-IV/blob/master/docs/VIRTUALIZATION.md)
@@ -138,10 +142,6 @@ Para leer la documentación detallada de cómo se ha realizado, consulte el arch
 Para descargar la imagen desde Docker hub: `docker pull marioanloru/billboard-iv`
 
 Se encuentra en : https://hub.docker.com/r/marioanloru/billboard-iv/
-
-Para acceder a la aplicación desplegada mediante docker: 
-
-Contenedor: https://docker-billboard-iv.herokuapp.com/
 
 ## 7 - Autores
 
