@@ -48,6 +48,8 @@ Desde el log de github, podemos observar que el despliegue ha sido correcto
 
 ![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/heroku-gitf.png)
 
+
+
 #### Fichero `Procfile`
 
 Heroku posee distintos tipos de ejecución y nosotros podemos definir como queremos que nuestra aplicación se ejecute. Para configurar que tipo de ejecución se quiere utilizar en Heroku se define a través del fichero `Procfile`
