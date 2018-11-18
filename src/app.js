@@ -32,6 +32,16 @@ app.get('/', (req, res) => {
     //res.status(200).send(new Respuesta('OK', res.statusCode, req.route.path, 'App deployed', ''));
 });
 
+//  Root app path
+app.get('/status', (req, res) => {
+    res.status(200).send({
+        "status": "OK",
+        "ruta": req.route.path
+    })
+    //Desactivo respuesta temporal ya que si no no pasa los test de JJ
+    //res.status(200).send(new Respuesta('OK', res.statusCode, req.route.path, 'App deployed', ''));
+});
+
 //  Returns a random film
 app.get('/pelicula', (req, res) => {
     let min = 0;

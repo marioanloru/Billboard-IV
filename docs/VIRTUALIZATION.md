@@ -1,4 +1,4 @@
-## Virtualización utilizando contenedores
+# Virtualización utilizando contenedores
 
 Para ello se ha utilizado la herramienta `Docker`. Se ha creado un fichero denominado `Dockerfile` en la raíz de la aplicación, este fichero contiene las órdenes necesarias para instalar dependencias y la aplicación en sí en el contenedor que se creará
 
@@ -48,7 +48,7 @@ Con la opción -d se ejecutará en background y con la opción -p se especifica 
 
 Tras este comando, si accedemos a 0.0.0.0:8333 tendremos acceso a la aplicación
 
-### Orquestación mediante docker-compose
+## Orquestación mediante docker-compose
 
 Para poder orquestar diferentes contenedores se va a utilizar docker-compose, con ello, podemos definir los distintos servicios que se van a utilizar (especificando como se crearán esos contenedores), así como los puertos a exponer de cada servicio y multitud de otras opciones.
 
@@ -72,3 +72,33 @@ Para ejecutar el docker-compose:
 `docker-compose up -d`
 
 Esto construirá todos los servicios y lo configurado en el ficher `docker-compose.yml`. Con la opción -d se ejecutará en background, si queremos ver los log podemos acceder a los logs del contenedor directamente (`docker logs <NAME>) o si ejecutamos el contenedor sin la opción -d tendremos directamente acceso.
+
+## Docker Hub
+
+Para compartir la imagen de docker con quien la desee se utiliza Docker Hub. Aquí, puedo pushear en el correspondiente repositorio la imagen que desee con un tag.
+
+Para realizarlo hay que estar registrado en Docker Hub y logueado en local, una vez tenemos la imagen de docker, basta con ponerle un tag y pushear al repositorio que se debe haber creado.
+
+Para descargar la imagen de docker de la aplicación:
+
+`docker pull marioanloru/billboard-iv`
+
+## Despliegue de Docker en Heroku
+
+Para empezar, he creado otra app llamada `docker-billboard-iv` en la que se desplegará mediante docker, para no pisar la ya realizada en `billboard-iv` conectada con github.
+
+Para realizar este despliegue, se ha utilizado el Heroku CLI.  Una vez realizado el login en heroku mediante: `heroku container:login` el siguiente paso es pushear la imagen a la aplicación, para ello:
+
+`heroku container:push web --app docker-billboard-iv`
+
+Con ello ya tenemos subida la imagen, queda desplegearla, y para ello:
+
+`heroku container:release web --app=docker-billboard-iv`
+
+La aplicación se puede encontrar desplegada mediante Docker en Heroku en:
+
+Contenedor: https://docker-billboard-iv.herokuapp.com/
+
+También desde la línea de comandos se puede abrir la aplicación:
+
+`heroku open --app docker-billboard-iv`
