@@ -45,7 +45,7 @@ describe('GET method tests', () => {
     supertest(app)
       .get('/pelicula/estonoexiste')
       .expect('Content-Type', /json/)
-      .expect(500, done)
+      .expect(200, done)
   });
 
   //  GET film by date
@@ -61,7 +61,7 @@ describe('GET method tests', () => {
     supertest(app)
       .get('/pelicula/19950/9/11')
       .expect('Content-Type', /json/)
-      .expect(500, done)
+      .expect(200, done)
   });
 });
 

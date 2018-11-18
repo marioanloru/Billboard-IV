@@ -18,6 +18,10 @@ peliculas.push(new Pelicula('Titanic', new Date(1998,1,8)))
 peliculas.push(new Pelicula('Solo en casa', new Date(1990,12,21)))
 
 
+//  Response middleware
+/*app.use((req, res, next) => {
+    res.send({'Time': Date.now()})
+});*/
 //  Root app path
 app.get('/', (req, res) => {
     res.status(200).send({
@@ -56,8 +60,8 @@ app.get('/pelicula/:titulo', (req, res) => {
             new Respuesta('OK', res.statusCode, req.route.path, 'Film found by title', pelicula)
         );
     } else {
-        res.status(500).send(
-            new Respuesta('ERROR', res.statusCode, req.route.path, 'Film not found by title', '')
+        res.status(200).send(
+            new Respuesta('OK', res.statusCode, req.route.path, 'Film not found by title', '')
         );
     }
 });
@@ -79,8 +83,8 @@ app.get('/pelicula/:anyo/:mes/:dia', (req, res) => {
             new Respuesta('OK', res.statusCode, req.route.path, 'Film found by date', pelicula)
         );
     } else {
-        res.status(500).send(
-            new Respuesta('ERROR', res.statusCode, req.route.path, 'Film not found by date', '')
+        res.status(200).send(
+            new Respuesta('OK', res.statusCode, req.route.path, 'Film not found by date', '')
         );
     }
 });
@@ -106,7 +110,7 @@ app.put('/pelicula/:titulo/:anyo/:mes/:dia', (req, res) => {
             new Respuesta('OK', res.statusCode, req.route.path, 'New film inserted', nueva_pelicula)
         );
     } else {
-        res.status(500).send(
+        res.status(200).send(
             new Respuesta('ERROR', res.statusCode, req.route.path, 'Film not inserted', '')
         );
     }
@@ -130,12 +134,18 @@ app.delete('/pelicula/:titulo', (req, res) => {
             new Respuesta('OK', res.statusCode, req.route.path, 'Film deleted', pelicula_deleted)
         );
     } else {
-        res.status(500).send(
+        res.status(200).send(
             new Respuesta('ERROR', res.statusCode, req.route.path, 'Could not delete film', req.params.titulo)
         );
     }
 })
 
-//  Delete first ocurrence of film with given date
+//  404 error route, this has to be ALWAYS the last route  
+app.get('*', (req, res) => {
+    res.status(404).send(
+        new Respuesta('ERROR', res.statusCode, req.route.path, 'This page could not be found', '')
+    );
+});
+
 module.exports = app;
 
