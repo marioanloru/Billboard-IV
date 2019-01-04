@@ -6,12 +6,9 @@ Copyright (C) 2018-2019 Mario Antonio López Ruiz
 
 ## 1 - Descripción
 
-Proyecto desarrollado en la asignatura "Infraestructura Virtual" de la ETS de Ingenierías Informática y de Telecomunicación en el grado de Ingeniería Informática. Consiste en la obtención de información de la cartelera cinematográfica bajo determinadas condiciones (tiempo, situación geográfica...), así como poder consultar opiniones del público sobre las diferentes películas.
-
-Constará de dos microservicios relacionados con carteleras cinematográficas, siendo prioritario el primerio ante el segundo:
+Microservicio relacionados con carteleras cinematográficas, siendo prioritario el primero:
 
 - Obtener información de la cartelera bajo determinadas condiciones
-- Obtener opiniones de usuarios sobre ciertas películas de la cartelera
 
 Para probar el proyecto, una vez descargado, basta con ejecutar:
 
@@ -56,47 +53,7 @@ Para más detalles, consulte el archivo [LICENSE](https://github.com/marioanloru
 
 ## 3 - Servicios y herramientas
 
-Las herramientas utilizadas para el desarrollo de este proyecto, así como los motivos por los cuales se han seleccionado:
-
-- ### NodeJS
-
-  - Uso de javascript tanto en cliente como en servidor
-  - Asíncrono (basado en eventos)
-  - Gestión de paquetes con NPM (retroalimentación alta por parte de la comunidad)
-
-- ### Express
-
-  - Framework web para Node
-  - Minimalista y flexible
-
-- ### AngularJS
-
-  - Framework para frontend
-  - Utilizado para crear y mantener aplicaciones web de una sola página
-  - Modelo Vista Controlador (MVC), haciendo que desarrollo y pruebas sean más fáciles
-
-- ### Redis
-
-  - Base de datos en memoria
-  - NoSQL
-
-- ### Docker
-
-  - Gran adopción en el ámbito empresarial
-  - Ventajas frente a máquinas virtuales
-  - Despliegue ágil, automatizado y seguro
-  - Portabilidad
-  - Automatización de tests
-
-- ### Mocha
-
-  - Posibilidad de generar test síncronos o asíncronos
-  - Sencillez
-  - Utilidades para la ejecución y reporte de los tests
-
-- ### Grunt
-  - Automatización de procesos (validación de sintaxis, minificación, compilación...)
-
+Las herramientas utilizadas para el desarrollo de este proyecto se pueden consultar en [HERRAMIENTA_Y_SERVICIOS](https://github.com/marioanloru/Billboard-IV/blob/master/LICENSE), así como los motivos por los cuales se han seleccionado
 
 ## 4 - Despliegue en PaaS
 
@@ -106,27 +63,8 @@ Para comprobar el despliegue en Heroku funcionando: [DESPLIEGUE](https://billboa
 Puede consultar con detalle la configuración para el despliegue en Hekoru en [DESPLIEGUE](https://github.com/marioanloru/Billboard-IV/blob/master/docs/DESPLIEGUE.md)
 
 ## 5 - API
-Tanto si la aplicación se está desplegando en local como si se utiliza el despliegue en Heroku, aquí se exponen las funcionalidades en base a las rutas disponibles:
+Consultar la documentación en https://github.com/marioanloru/Billboard-IV/blob/master/docs/API.md
 
-### Comprobar estado de la app
-Para comprobar el estado de la aplicación, petición GET a la ruta:: `/`
-
-### Obtener una película aleatoria
-Petición GET a la ruta: `/pelicula`
-
-### Obtener una película por título
-Petición GET a la ruta: `/pelicula/<titulo>` siendo `<titulo>` el título de la película a consultar
-
-### Obtener una película por fecha
-Petición GET a la ruta: `/pelicula/<año>/<mes>/<dia>` sustituyendo los parametros entre `<>` por la el valor de la variable que indica su nombre
-
-### Insertar una película nueva
-Petición PUT a la ruta: `/pelicula/<titulo>/<anyo>/<mes>/<dia>` sustituyendo los parametros entre `<>` por la el valor de la variable que indica su nombre.
-Un ejemplo con cURL: `curl -X PUT http://localhost:8333/pelicula/rutia/2/5/1996`
-
-### Eliminar una película por título
-[TO DO]Este apartado tendrá mas sentido cuando se añada persistencia mediante bases de datos
-Peticion DELETE a la ruta: `/pelicula/<titulo>` siendo `<titulo>` el nombre de la película a eliminar
 ## 6 - Aislamiento mediante contenedores
 
 Para acceder y descargar la imagen de docker [Enlace a DockerHub](https://hub.docker.com/r/marioanloru/billboard-iv/)
