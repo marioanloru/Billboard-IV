@@ -1,0 +1,45 @@
+---
+  - hosts: all
+    sudo: yes
+    gather_facts: yes
+    remote_user: vagrant
+
+    tasks:
+    - name: Actualizar paquetes y cache del sistema
+      become: yes
+      apt: 
+        update_cache: yes
+
+    - name: Instalacion de git
+      apt: 
+        name: git
+        state: latest
+
+    - name: Instalacion de build-essentials
+      apt:
+        name: build-essential
+        state: latest
+
+    - name: Instalacion de npm
+      apt: 
+        name: npm
+        state: present
+
+    - name: Instalacion de node via n (npm)
+      become: yes
+      command: npm install -g n
+
+    - name: Actualizacion de node a la ultima version
+      become: yes
+      command: n latest
+
+    - name: Instalacion de Grunt
+      npm:
+        name: grunt
+        global: yes
+        state: present
+
+    - name: Clonar repositorio de la aplicacion Billboard
+      git: repo=https://github.com/marioanloru/Billboard-IV.git dest=Billboard-IV/ clone=yes
+
+
