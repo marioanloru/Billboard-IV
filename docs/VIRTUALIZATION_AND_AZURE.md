@@ -2,14 +2,6 @@
 
 Creamos una máquina virtual con `Vagrant init` en el directorio de la aplicación, y lo modificamos para que, utilizando Ansible, automatizamos el proceso de creación y provisionamiento de la máquina virtual, creando y configurándose de forma automática. El fichero Vagrantfile queda de la forma:
 
-
-
-Para poder utilizar ansible hay que instalarlo con:
-
-`sudo apt-get install ansible`
-
-La configuración y órdenes de ansible residen en el fichero `playbook.yml`:
-
 ```bash
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
@@ -83,7 +75,12 @@ end
 
 Estamos especificando que la imagen que se usará en la máquina virtual es `ubuntu 16.04`, el forwarding de puertos, el puerto 8333 de la máquina será el 8333 en el host y que para el provisionamiento se utilizará el fichero YAML `playbook.yml` mediante ansible. En este fichero especificamos una serie de tareas siguiendo un orden. Cada tarea tiene un nombre que especifica que se está haciendo, para que la persona que lo ejecute pueda entender que está ocurriendo.
 
-El fichero `playbook.yml` queda de la siguiente forma:
+
+Para poder utilizar ansible hay que instalarlo con:
+
+`sudo apt-get install ansible`
+
+La configuración y órdenes de ansible residen en el fichero `playbook.yml`:
 
 ```yaml
 ---
@@ -130,7 +127,7 @@ El fichero `playbook.yml` queda de la siguiente forma:
       git: repo=https://github.com/marioanloru/Billboard-IV.git dest=Billboard-IV/ clone=yes
 ```
 
-Las tareas que especificamos son, limpiar la caché, actualizar la versión de git, instalar los paquetes básicos para la máquina virtual, descargar npm e instalar con el mismo node. Instalo el paquete de npm `gruntp  para poder levantar la aplicación y por último clono el repositorio de la aplicación.
+Las tareas que especificamos son, limpiar la caché, actualizar la versión de git, instalar los paquetes básicos para la máquina virtual, descargar npm e instalar con el mismo node. Instalo el paquete de npm `grunt`  para poder levantar la aplicación y por último clono el repositorio de la aplicación.
 
 Para iniciar la máquina virtual, ejecutamos `vagrant up` en el directorio en el que se encuentre el `Vagrantfile`, esto creará la máquina virtual siguiendo las órdenes de dicho fichero y provisionando mediante lo especificado en `playbook.yml` con ansible:
 
@@ -154,7 +151,7 @@ Para comprobar que la máquina se ha creado y provisionado con éxito, nos conec
 
 Y vemos que se ha levantado la aplicación en la máquina virtual correctamente.
 
-La instalación de node se ha realizado mediante npm tras tener problemas instalando con apt nodejs, gracias a esta [RESPUESTA](https://www.digitalocean.com/community/questions/node-installed-but-can-t-get-version-or-run-node) en el digitalocean. Para mas detalles sobre la creación del fichero `playbook.yml`  de Ansible puede consultarse [AQUI](https://docs.ansible.com/ansible/latest/user_guide/playbooks.html)
+La instalación de node se ha realizado mediante npm tras tener problemas instalandolo con apt nodejs, gracias a esta [RESPUESTA](https://www.digitalocean.com/community/questions/node-installed-but-can-t-get-version-or-run-node) en el digitalocean. Node se instalaba como `nodejs` pero de esta forma lo he "solucionado". Para mas detalles sobre la creación del fichero `playbook.yml`  de Ansible puede consultarse [AQUI](https://docs.ansible.com/ansible/latest/user_guide/playbooks.html)
 
 # Despliegue en Azure
 
@@ -313,6 +310,7 @@ Vagrant.configure(2) do |config|
 end
 ```
 
+Las variables de entorno deben corresponder a los credenciales de Azure, mediante el comando `azure account show` podemos obtener el valor del TENANT_ID y el SUBSCRIPTION_ID. Para obtener el valor de AZURE_CLIENT_ID y AZURE_CLIENT_SECRET hay que generar una app desde el portal de Azure como recurso, que estará asociado a la suscripción que se nos proporcionó durante la asignatura. Es muy importante darle permisos a esta aplicación como `contribuidor` (o superior) para que puedan ejecutarse determinados comandos que requerirá `vagrant up`. 
 Una vez configurado el Vagrantfile correctamente, solo queda crear la máquina en Azure, para ello:
 
 `vagrant up --provider=azure` (el provider no sería necesario especificarlo en este caso ya que solo hay uno)
