@@ -93,12 +93,10 @@ Las herramientas utilizadas para el desarrollo de este proyecto, así como los m
   - Posibilidad de generar test síncronos o asíncronos
   - Sencillez
   - Utilidades para la ejecución y reporte de los tests
-  
+
 - ### Grunt
   - Automatización de procesos (validación de sintaxis, minificación, compilación...)
-- ### Travis
-  - Sincronización con Github
-  - Ejecución de tests de forma inmediata al añadir funcionalidades
+
 
 ## 4 - Despliegue en PaaS
 
@@ -129,7 +127,7 @@ Un ejemplo con cURL: `curl -X PUT http://localhost:8333/pelicula/rutia/2/5/1996`
 ### Eliminar una película por título
 [TO DO]Este apartado tendrá mas sentido cuando se añada persistencia mediante bases de datos
 Peticion DELETE a la ruta: `/pelicula/<titulo>` siendo `<titulo>` el nombre de la película a eliminar
-## 6 - Virtualización mediante contenedores
+## 6 - Aislamiento mediante contenedores
 
 Para acceder y descargar la imagen de docker [Enlace a DockerHub](https://hub.docker.com/r/marioanloru/billboard-iv/)
 
@@ -137,13 +135,27 @@ La aplicación desplegada en Heroku mediante docker se encuentra en :
 
 Contenedor: https://docker-billboard-iv.herokuapp.com/
 
-Para realizar el aislamiento de la aplicación en un entorno virtualizado (usando contenedores) se usa [Docker](https://www.docker.com/). Docker es una herramienta de gestión de contenedores que además de permitir instalarlos permite trabajar con conjuntos de contenedores y exportarlos de forma que se pueda desplegar en diferentes servicios en la nube.
+Para realizar el aislamiento de la aplicación en un entorno aislado (usando contenedores) se usa [Docker](https://www.docker.com/). Docker es una herramienta de gestión de contenedores que además de permitir instalarlos permite trabajar con conjuntos de contenedores y exportarlos de forma que se pueda desplegar en diferentes servicios en la nube.
 
 Para leer la documentación detallada de cómo se ha realizado, consulte el archivo [VIRTUALIZATION](https://github.com/marioanloru/Billboard-IV/blob/master/docs/VIRTUALIZATION.md)
 
 Para descargar la imagen desde Docker hub: `docker pull marioanloru/billboard-iv`
 
-## 7 - Autores
+## 7 - Despliegue desde 0 en Azure
+
+He utilizado como IaaS Azure, generando la/s máquina/s virtuales con Vagrant y su configuración mediante Ansible. Para levantar la aplicación se utiliza el paquete de npm `flightplan`
+
+Despligue final: 40.114.236.235:8333
+
+URL Despliegue final: http://billboardiv-vm.westeurope.cloudapp.azure.com:8333/
+
+Para crear y provisionar la/s máquina/s virtuales en Azure: `vagrant up --provider=azure`. Para levantar el servicio: `cd despliegue; fly staging`
+
+Para más detalles consultar [VIRTUALIZATION_AND_AZURE](https://github.com/marioanloru/Billboard-IV/blob/master/docs/VIRTUALIZATION_AND_AZURE.md)
+
+
+
+## 8 - Autores
 
 Para más detalles sobre los autor(es), consulte el archivo [AUTHORS](https://github.com/marioanloru/Billboard-IV/blob/master/AUTHORS.md)
 
