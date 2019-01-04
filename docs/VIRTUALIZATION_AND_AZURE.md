@@ -136,21 +136,21 @@ Para iniciar la máquina virtual, ejecutamos `vagrant up` en el directorio en el
 
 (La primera vez que se ejecuta tardará un poco más al tener que descargarse la imagen especificada de Ubuntu)
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/provisioning-up.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/provisioning-up.png)
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/provisioning-up2.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/provisioning-up2.png)
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/provisioning-up3.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/provisioning-up3.png)
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/provisioning-up4.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/provisioning-up4.png)
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/provisioning-up5.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/provisioning-up5.png)
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/provisining-upfinal.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/provisining-upfinal.png)
 
 Para comprobar que la máquina se ha creado y provisionado con éxito, nos conectamos a ella mediante ssh y ejecutamos la aplicación, tras ello comprobamos en el host si podemos acceder:
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/vagrant_ssh.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/vagrant_ssh.png)
 
 Y vemos que se ha levantado la aplicación en la máquina virtual correctamente.
 
@@ -160,13 +160,13 @@ La instalación de node se ha realizado mediante npm tras tener problemas instal
 
 Lo primero es descargar el plugin de Vagrant para azure: `vagrant-azure`, para ello actualizo Vagrant a la última versión disponible:
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/vagrant-update.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/vagrant-update.png)
 
 Y descargo el plugin de vagrant con:
 
 `vagrant plugin install vagrant-azure` 
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/vagrant-azure.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/vagrant-azure.png)
 
 Instalo el cliente de Azure mediande node:
 
@@ -174,7 +174,7 @@ Instalo el cliente de Azure mediande node:
 
 Compruebo la versión del cli con `azure --version`
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/azure-version.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/azure-version.png)
 
 Ya tenemos los prerrequisitos instalados, ahora tenemos que configurar los credenciales e información adicional de Azure y nuestra suscripción para poder interactuar con las máquinas de Azure, para ello:
 
@@ -188,19 +188,19 @@ Con el siguiente comando tendremos que irnos al navegador (con la url que se pro
 
 `azure account download`
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/account1.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/account1.png)
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/account-download.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/account-download.png)
 
 `azure account import ~/Descargas/Windows\ Azure\ MSDN\ -\ 4_1_2019\ 14_23_30\ -\ credentials.publishsettings`
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/azure-import.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/azure-import.png)
 
 Podemos eliminar el fichero una vez importado, ya que contiene información sensible sobre nuestra suscripción en azure. Comprobamos que la cuenta se ha importado correctamente (los ids han sido borrados por motivos de seguridad)
 
 `azure account list`
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/azure-list.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/azure-list.png)
 
 Ahora nos logueamos con nuestra cuenta, para ello:
 
@@ -212,13 +212,13 @@ Comprobamos la lista de imagenes disponibles de Ubuntu 16.x en Azure con:
 
 `azure vm image list | grep -i ubuntu-16`
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/azure-vm.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/azure-vm.png)
 
 Para ver donde podemos provisionar las máquinas: 
 
 `azure vm location list`
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/azure-locationl.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/azure-locationl.png)
 
 Para poder continuar, genero el par de claves públicas y privada y con ellas genero un certificado que hay que subir mas tarde a azure
 
@@ -228,7 +228,7 @@ Para poder continuar, genero el par de claves públicas y privada y con ellas ge
 
 `openssl x509 -inform pem -in ~/.ssh/azurevagrant.key -out ~/.ssh/azurevagrant.cer `
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/azure-cert.png) 
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/azure-cert.png) 
 
 Ya podemos subir el cerficado a Azure siguiendo las instrucciones en la [documentacion oficial](https://docs.microsoft.com/es-es/azure/azure-api-management-certs) 
 
@@ -317,21 +317,21 @@ Una vez configurado el Vagrantfile correctamente, solo queda crear la máquina e
 
 `vagrant up --provider=azure` (el provider no sería necesario especificarlo en este caso ya que solo hay uno)
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/azure-deploy.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/azure-deploy.png)
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/azure-deploy2.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/azure-deploy2.png)
 
 Y se ejecutan el resto de tareas de ansible de provisionamiento, llegando a: 
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/azure-deploy3.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/azure-deploy3.png)
 
 La máquina ya está creada en Azure, comprobamos conectándonos mediante sshDocumentación y blogs seguidos para configuración de máquinas virtuales vagrant en Azure:
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/azure-vm-creada.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/azure-vm-creada.png)
 
 Y vemos que está creada correctamente:
 
-![](/home/tehribbon/Documentos/INFORMATICA/4ºCurso/IV/Billboard-IV/docs/img/azure-funcionando.png)
+![](https://github.com/marioanloru/Billboard-IV/blob/master/docs/img/azure-funcionando.png)
 
 Para unas guías de ejemplo paso a paso de la configuración de Vagrantfile con Azure:
 
