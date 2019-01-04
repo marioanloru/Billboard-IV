@@ -53,7 +53,7 @@ Para más detalles, consulte el archivo [LICENSE](https://github.com/marioanloru
 
 ## 3 - Servicios y herramientas
 
-Las herramientas utilizadas para el desarrollo de este proyecto se pueden consultar en [HERRAMIENTA_Y_SERVICIOS](https://github.com/marioanloru/Billboard-IV/blob/master/LICENSE), así como los motivos por los cuales se han seleccionado
+Las herramientas utilizadas para el desarrollo de este proyecto se pueden consultar en [HERRAMIENTA_Y_SERVICIOS](https://github.com/marioanloru/Billboard-IV/blob/master/docs/HERRAMIENTAS_Y_SERVICIOS.md), así como los motivos por los cuales se han seleccionado
 
 ## 4 - Despliegue en PaaS
 
@@ -63,7 +63,7 @@ Para comprobar el despliegue en Heroku funcionando: [DESPLIEGUE](https://billboa
 Puede consultar con detalle la configuración para el despliegue en Hekoru en [DESPLIEGUE](https://github.com/marioanloru/Billboard-IV/blob/master/docs/DESPLIEGUE.md)
 
 ## 5 - API
-Consultar la documentación en https://github.com/marioanloru/Billboard-IV/blob/master/docs/API.md
+Consultar la documentación de la [API](https://github.com/marioanloru/Billboard-IV/blob/master/docs/API.md)
 
 ## 6 - Aislamiento mediante contenedores
 
