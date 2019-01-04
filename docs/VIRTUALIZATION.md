@@ -1,4 +1,4 @@
-# Virtualización utilizando contenedores
+# Virtualización ligera utilizando contenedores
 
 Para ello se ha utilizado la herramienta `Docker`. Se ha creado un fichero denominado `Dockerfile` en la raíz de la aplicación, este fichero contiene las órdenes necesarias para instalar dependencias y la aplicación en sí en el contenedor que se creará
 
