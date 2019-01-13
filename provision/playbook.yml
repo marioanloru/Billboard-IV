@@ -1,6 +1,5 @@
 ---
   - hosts: all
-    sudo: yes
     gather_facts: yes
     remote_user: vagrant
 
@@ -10,17 +9,8 @@
       apt: 
         update_cache: yes
 
-    - name: Instalacion de git
-      apt: 
-        name: git
-        state: latest
-
-    - name: Instalacion de build-essentials
-      apt:
-        name: build-essential
-        state: latest
-
     - name: Instalacion de npm
+      become: yes
       apt: 
         name: npm
         state: present
@@ -33,13 +23,14 @@
       become: yes
       command: n latest
 
-    - name: Instalacion de Grunt
+    - name: Instalacion de los paquetes necesarios de node a traves de npm en package.json
       npm:
-        name: grunt
+        path: /home/vagrant/Billboard-IV
+        production: yes
+        state: latest
+
+    - name: Instalacion de nodemon de forma global
+      become: yes
+      npm:
+        name: nodemon
         global: yes
-        state: present
-
-    - name: Clonar repositorio de la aplicacion Billboard
-      git: repo=https://github.com/marioanloru/Billboard-IV.git dest=Billboard-IV/ clone=yes
-
-
