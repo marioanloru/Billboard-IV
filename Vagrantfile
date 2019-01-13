@@ -16,10 +16,10 @@ Vagrant.configure("2") do |config|
   # Configuracion del proveedor, Azure en este caso
   config.vm.provider :azure do |provider|
     # Credenciales para Azure
-    provider.tenant_id = "90367942-a8d3-4bf2-88bd-dd03089b3bb2"
-    provider.client_id = "a500f9cc-b1ee-4fd1-9e21-00498c65e2ab"
-    provider.client_secret = "7RbEUj6hzUg2oB6gSLGx5WggudoGCy9jy+H0FCyELLE="
-    provider.subscription_id = "3e1ad7f7-e750-4c32-8210-69aff555ba47"
+    provider.tenant_id = ENV['AZURE_TENANT_ID']
+    provider.client_id = ENV['AZURE_CLIENT_ID']
+    provider.client_secret = ENV['AZURE_CLIENT_SECRET']
+    provider.subscription_id = ENV['AZURE_SUBSCRIPTION_ID']
     provider.vm_name = "billboardivmachine"
     provider.location = "westeurope"
     provider.resource_group_name = "resources_hito_5"
