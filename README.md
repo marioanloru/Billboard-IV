@@ -83,11 +83,11 @@ Para descargar la imagen desde Docker hub: `docker pull marioanloru/billboard-iv
 
 He utilizado como IaaS Azure, generando la/s máquina/s virtuales con Vagrant y su configuración mediante Ansible. Para levantar la aplicación se utiliza el paquete de npm `flightplan`
 
-Despliegue final: 40.114.236.235:8333
+Despliegue final: 104.214.228.164:8333
 
-URL Despliegue final: http://billboardiv-vm.westeurope.cloudapp.azure.com:8333/
+URL Despliegue final: billboardivmachine.westeurope.cloudapp.azure.com:8333/
 
-Para crear y provisionar la/s máquina/s virtuales en Azure: `vagrant up --provider=azure`. Para levantar el servicio: `cd despliegue; fly staging`
+Para crear y provisionar la/s máquina/s virtuales en Azure: `vagrant up`. Para levantar el servicio: `cd despliegue; fly production`
 
 Para más detalles consultar [VIRTUALIZATION_AND_AZURE](https://github.com/marioanloru/Billboard-IV/blob/master/docs/VIRTUALIZATION_AND_AZURE.md)
 
